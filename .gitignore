@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+train.tsv
+dev.tsv
+test.tsv
+best_model.pt
+test_predictions.tsv
+train_log.txt
