@@ -1,12 +1,3 @@
-Show more
-Assessed README updates: scores, Windows compatibility, LebNet mention
-Assessed README updates: scores, Windows compatibility, LebNet mention
-
-Good call skipping collaborators — public satisfies the form's requirement either way.
-
-Here's the updated README — added real results, fixed python3→python (since that's what worked for you), and added context on the LebNet program. Copy this whole thing over your current README:
-
-markdown
 # Lebanese Dialect → MSA Translation (CNN Seq2Seq)
 
 Translates informal Beirut/Levantine Arabic into Modern Standard Arabic (MSA)
