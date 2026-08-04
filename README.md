@@ -3,19 +3,19 @@
 Translates informal Beirut/Levantine Arabic into Modern Standard Arabic (MSA)
 using a character-level CNN encoder-decoder (ConvS2S-style, with attention).
 
-Built for the **LebNet Tech Fellows Program (2026)** — AI for Lebanon track.
+Built for the **LebNet Tech Fellows Program (2026)** ; AI for Lebanon track.
 Motivation: support Arabic literacy and education tools for students who write
 in informal Lebanese dialect but need formal Arabic for schoolwork/exams.
 
 Data: MADAR Corpus-6 (Beirut ↔ MSA), Bouamor et al. 2018.
 
 ## Files
-- `build_dataset.py` — extracts aligned Beirut↔MSA pairs from the raw MADAR TSVs into train/dev/test.tsv
-- `data.py` — vocab building + PyTorch Dataset
-- `model.py` — CNN encoder-decoder model
-- `train.py` — training loop, saves `best_model.pt` (resumes automatically if a checkpoint exists)
-- `evaluate.py` — computes BLEU/chrF on test set + prints example translations
-- `demo.py` — interactive: type a sentence, get the MSA translation
+- `build_dataset.py` : extracts aligned Beirut↔MSA pairs from the raw MADAR TSVs into train/dev/test.tsv
+- `data.py` : vocab building + PyTorch Dataset
+- `model.py` : CNN encoder-decoder model
+- `train.py` : training loop, saves `best_model.pt` (resumes automatically if a checkpoint exists)
+- `evaluate.py` : computes BLEU/chrF on test set + prints example translations
+- `demo.py` : interactive: type a sentence, get the MSA translation
 
 ## Setup (run once)
 
@@ -95,7 +95,7 @@ sentences and precise numeric/entity details.
   spelling, which would cause severe out-of-vocabulary issues at the word level.
 - Limitations / future work:
   - MADAR's Beirut subset is travel/tourism-domain (BTEC) sentences, not naturalistic
-    social-media Lebanese text — broader coverage would need social-media dialect data.
+    social-media Lebanese text - broader coverage would need social-media dialect data.
   - BLEU/chrF scores are modest; longer training, beam search decoding, or a larger
     model would likely improve fluency and accuracy further.
   - Current decoding is greedy with a simple repetition guard; beam search is a
